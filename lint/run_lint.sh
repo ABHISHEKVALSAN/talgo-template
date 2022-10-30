@@ -104,7 +104,7 @@ then
 else
   lint_generic_one "$COMPONENT"
   # shellcheck disable=SC2076
-  if [[ " ${PYTHON_CODE[*]} " =~ " $COMPONENT "]]; then
+  if [[ " ${PYTHON_CODE[*]} " =~ " $COMPONENT " ]]; then
     lint_python_one "$COMPONENT"
   fi
 fi
