@@ -8,14 +8,14 @@ repos:
     rev: 3.8.3
     hooks:
       - id: flake8
-  - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.6.0
-    hooks:
-      - id: reorder-python-imports
   - repo: https://github.com/PyCQA/pydocstyle
     rev: 5.0.2
     hooks:
       - id: pydocstyle
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.6.0
+    hooks:
+      - id: reorder-python-imports
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v2.1.0
     hooks:
