@@ -5,4 +5,4 @@ WORKDIR /usr/src
 COPY .util/lint/python /usr/src
 COPY $COMPONENT /usr/src/app
 
-CMD ["usr/src/run_lint_python.sh"]
+CMD ["/usr/src/run_lint_python.sh"]
