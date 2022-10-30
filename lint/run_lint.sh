@@ -23,7 +23,7 @@ if [[ -z "$2" ]]
 fi
 
 lint_generic_one() {
-  $COMPONENT=$1
+  COMPONENT=$1
   docker build --build-arg COMPONENT="$COMPONENT" \
     -t "${PROJECT}"_lint_generic \
     -f .util/lint/generic/Dockerfile .
