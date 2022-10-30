@@ -21,7 +21,7 @@ RUN mv terraform /usr/local/bin/
 # [GO]
 RUN wget --no-check-certificate https://golang.org/dl/go1.16.2.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go1.16.2.linux-amd64.tar.gz
-ENV PATH="/usr/loca/go/bin:/root/go/bin:/root/.local/bin:${PATH}"
+ENV PATH="/usr/local/go/bin:/root/go/bin:/root/.local/bin:${PATH}"
 
 # [Gitleaks]
 RUN GO111MODULE=on go get github.com/zricethezav/gitleaks/v7
@@ -38,4 +38,4 @@ ARG COMPONENT
 WORKDIR /usr/src
 COPY .util/lint/generic /usr/src
 COPY $COMPONENT /usr/src/app
-COPY ["/usr/src/run_lint_generic.sh"]
+CMD ["/usr/src/run_lint_generic.sh"]
