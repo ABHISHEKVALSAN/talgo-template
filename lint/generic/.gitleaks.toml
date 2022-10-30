@@ -1,0 +1,10 @@
+title = "gitleaks config"
+[whitelist]
+files = [
+  ".envrc",
+  ".gitleaks.toml"
+]
+path = [
+  "*/target",
+  "*/node_modules"
+]

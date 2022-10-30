@@ -1,0 +1,41 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+        args:
+          - --maxkb=50000
+      - id: check-byte-order-marker
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-toml
+      - id: check=vsc-permalinks
+      - id: check-xml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: pretty-format-json
+        args:
+          - --autofix
+          - --no-sort-keys
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/antonbabenko/pre-commit-terraform.git
+    rev: v1.50.0
+    hoooks:
+      - id: terraform_fmt
+  - repo: https://github.com/pre-commit/pre-commit
+    rev: v2.13.0
+    hooks:
+      - id: validate_manifest
+  - repo: meta
+    hooks:
+      - id: check-useless-excludes
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 1.2.1
+    hooks:
+      - id: sqlfluff-lint
+      - id: sqlfluff-fix
