@@ -12,7 +12,7 @@ repos:
       - id: check-merge-conflict
       - id: check-symlinks
       - id: check-toml
-      - id: check=vsc-permalinks
+      - id: check-vcs-permalinks
       - id: check-xml
       - id: check-yaml
       - id: detect-private-key
@@ -25,7 +25,7 @@ repos:
       - id: trailing-whitespace
   - repo: https://github.com/antonbabenko/pre-commit-terraform.git
     rev: v1.50.0
-    hoooks:
+    hooks:
       - id: terraform_fmt
   - repo: https://github.com/pre-commit/pre-commit
     rev: v2.13.0
