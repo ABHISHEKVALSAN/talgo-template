@@ -108,3 +108,5 @@ else
   fi
   lint_generic_one "$COMPONENT"
 fi
+
+echo "Sucessful linting"

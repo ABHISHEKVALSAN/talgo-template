@@ -14,3 +14,5 @@ if [ -f app/.pydocstyle ] ; then
 fi
 
 pre-commit run -a
+
+echo "SUCCESSFUL PYTHON LINT"

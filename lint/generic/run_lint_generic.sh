@@ -9,4 +9,4 @@ pre-commit run -a
 
 gitleaks --path=. --config-path=.gitleaks.toml -v --no-git
 
-# find . --name 'README.md' -execdir gh-md-toc --no-backup {} \;
+echo "Successful generic lint"
