@@ -98,13 +98,13 @@ COMPONENT=$2
 
 if [[ $COMPONENT = "all" ]]
 then
-  lint_generic_all "${GENERIC_CODE[@]}"
-  lint_generic_all "${PYTHON_CODE[@]}"
   lint_python_all "${PYTHON_CODE[@]}"
+  lint_generic_all "${PYTHON_CODE[@]}"
+  lint_generic_all "${GENERIC_CODE[@]}"
 else
-  lint_generic_one "$COMPONENT"
   # shellcheck disable=SC2076
   if [[ " ${PYTHON_CODE[*]} " =~ " $COMPONENT " ]]; then
     lint_python_one "$COMPONENT"
   fi
+  lint_generic_one "$COMPONENT"
 fi
